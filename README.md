@@ -1,2 +1,4 @@
 # node-red-quit-flow
-A tiny flow to stop node-red on Windows
+A tiny flow to stop node-red on Windows.
+
+This will kill the node-red process. You can then close the browser window.
