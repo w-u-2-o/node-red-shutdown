@@ -1,0 +1,95 @@
+[
+    {
+        "id": "a748adf88a2d868b",
+        "type": "tab",
+        "label": "Node-RED Shutdown",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "37869aae5fa64e5e",
+        "type": "ui_button",
+        "z": "a748adf88a2d868b",
+        "name": "Shutdown",
+        "group": "186a7bdd86239e8a",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "power_settings_new",
+        "payload": "shutdown",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "b1069c2351c7fc33"
+            ]
+        ]
+    },
+    {
+        "id": "b1069c2351c7fc33",
+        "type": "exec",
+        "z": "a748adf88a2d868b",
+        "command": "taskkill /IM node.exe /F",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b65cb81b1ea54e0a",
+        "type": "ui_text",
+        "z": "a748adf88a2d868b",
+        "group": "186a7bdd86239e8a",
+        "order": 2,
+        "width": 1,
+        "height": 5,
+        "name": "spacer",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 190,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "186a7bdd86239e8a",
+        "type": "ui_group",
+        "name": "Power Group",
+        "tab": "7cfa0acacdc9425e",
+        "order": 6,
+        "disp": false,
+        "width": "1",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7cfa0acacdc9425e",
+        "type": "ui_tab",
+        "name": "STATION CONTROLLER MAIN",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
